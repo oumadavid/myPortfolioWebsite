@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title> 
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'poppins', sans-serif;
+        
+    }
+
+    body {
+        width: auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background: var(--bg-color);
+        position: relative;
+    }
+
+    :root {
+        --bg-color: #865d36;
+        --text-color: #3e362e;
+        --main-color: #93785b;
+        --white-color: #ac8968;
+        --shadow-color: #a69080;
+}
+
+    .project-box {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background: var(--bg-color);
+        width: auto;
+    }
+
+
+
+    .project-conatiner {
+        place-items: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects {
+        align-items: center;
+        background: var(--bg-color);
+        justify-content: center;
+        position: relative;
+        display: flex;
+        place-items: center;
+        width: 100%;
+        height: 500px;
+        top: 0;
+        left: 10px;
+    }
+
+    .projects img {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+
+    }
+
+    .web {
+        background: var(--bg-color);
+        left: 215px;
+    }
+
+    .web h2 {
+        top: 500px;
+        left: 300px;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+
+    .web p {
+        font-size: 1.5rem;
+    }
+
+    section {
+        height: auto;
+    }
+
+    .project-content {
+        position: relative;
+    }
+
+    .project-content .projects-info {
+        align-items: center;
+        background: var(--white-color);
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .project-content .projects-info h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin: 10px ;
+    }
+
+    .project-content .projects-info p{
+        font-size: 1.5rem;
+        margin: 10px 5px;
+    }
+
+    .project-content .projects-info li {
+        font-size: 1.5rem;
+        margin: 5px 50px;
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">David Ouma.</a>
+        <nav class="navbar">
+            <a href="#home" >Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="project-box" id="project-box">
+        <div class="project-container" id="project-container">
+            <div class="projects">
+                <img src="portfolio7.jpg" alt="">
+                <p></p>
+            </div>
+            <div class="web">
+                <h2>my personal website</h2>
+                <p><i class='bx bxs-contact'></i>David Ouma</p>
+                <p>June 15, 2024 - June 30, 2024</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="project-content" id="project-content">
+        <div class="projects-info">
+            <p>Using my coding experience I decided to develop ny portfolio website to display programming experiences in coding , connect with clients and also people in the tech industry.</p>
+            <h2>Captured Pages</h2>
+            <ul>
+                <li>Home page</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+                <li>contacts</li>
+            </ul>
+            <h2>Contents of the Website</h2>
+            <p>These are what is contained in the website</p>
+            <ul>
+                <li>The field I specialize in and various languages I use in those fields</li>
+                <li>How to reach me via various social media platforms</li>
+                <li>Testimonials from colleagues I have worked with and clients that I served</li>
+                <li>Some of the Projects that I have ceeated.</li>
+                <li>A textarea to add your view about the website.</li>
+            </ul>
+        </div>
+    </section>
+
+    
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

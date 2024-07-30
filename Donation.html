@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Donation Platform.</title> 
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        outline: none;
+        scroll-behavior: smooth;
+        font-family: 'poppins', sans-serif;
+        
+    }
+
+    body {
+        width: auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background: var(--bg-color);
+        position: relative;
+    }
+
+    :root {
+        --bg-color: #865d36;
+        --text-color: #3e362e;
+        --main-color: #93785b;
+        --white-color: #ac8968;
+        --shadow-color: #a69080;
+}
+
+    .project-box {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        background: var(--bg-color);
+        width: auto;
+    }
+
+
+
+    .project-conatiner {
+        place-items: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .projects {
+        align-items: center;
+        background: var(--bg-color);
+        justify-content: center;
+        position: relative;
+        display: flex;
+        place-items: center;
+        width: 100%;
+        height: 500px;
+        top: 0;
+        left: 10px;
+    }
+
+    .projects img {
+        width: 100%;
+        height: auto;
+        display: grid;
+        place-items: center;
+
+    }
+
+    .web {
+        background: var(--bg-color);
+        left: 215px;
+    }
+
+    .web h2 {
+        top: 500px;
+        left: 300px;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+
+    .web p {
+        font-size: 1.5rem;
+    }
+
+    section {
+        height: auto;
+    }
+
+    .project-content {
+        position: relative;
+    }
+
+    .project-content .projects-info {
+        align-items: center;
+        background: var(--white-color);
+        border-radius: 10px;
+        display: block;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .project-content .projects-info h2 {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin: 10px ;
+    }
+
+    .project-content .projects-info p{
+        font-size: 1.5rem;
+        margin: 10px 5px;
+    }
+
+    .project-content .projects-info li {
+        font-size: 1.5rem;
+        margin: 5px 50px;
+    }
+
+</style>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">David Ouma.</a>
+        <nav class="navbar">
+            <a href="#home" >Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="project-box" id="project-box">
+        <div class="project-container" id="project-container">
+            <div class="projects">
+                <img src="donation1.jpg" alt="">
+                <p></p>
+            </div>
+            <div class="web">
+                <h2>Student Donation Website.</h2>
+                <p><i class='bx bxs-contact'></i>David Ouma</p>
+                <p>July 03, 2024 - July 30, 2024</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="project-content" id="project-content">
+        <div class="projects-info">
+            <hr>
+            <h2>Student Donation Platform</h2>
+            <p>I developed an innovative Student Donation platform aimed at connecting students in need with generous donors. This website, built using React, CSS, HTML and JavaScript, provide a secure and intuitive environment for facilitating donations and support</p>
+            <h3>Key Features</h3>
+            <ul>
+                <li><b>User Authentication:</b> Secure login and registration system ensuring user data privacy and security.</li>
+                <li><b>Donation Management:</b> Easy-to-user interface for donors to browse and select student needs and for students to post their requirements.</li>
+                <li><b>Real-Time Updates:</b> Live Updates on donation statuses and student needs to keep users informed.</li>
+                <li><b>Responsive Design:</b> Ensures a seamlesss experience across all devices, from desktops to mobile phones.</li>
+                <li><b>Team Member Management:</b> Robust admin panel for managing user roles and permissions.</li>
+            </ul>
+            <p>This project demonstrates my expertise in creating secure, user-friendly web applications and my commitment to using technology to support and uplift communities.</p>
+
+            <hr>
+
+            <p>Feel free to adjust this description as needed to better reflect the specifics and unique aspects of your project.</p>
+            
+        </div>
+    </section>
+
+    
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

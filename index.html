@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio Website</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">David Ouma.</a>
+        <nav class="navbar">
+            <a href="#home" >Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="bx bx-moon" id="darkMode-icon"></div>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <!-- home section design -->
+     <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>David Ouma</h1>
+            <p>I am a passionate <span>Web Developer and an Aspiring Data Scientist</span> dedicated to creating innovative and efficient solutions that bridge the gap between data and decision-making. With a strong background in both web development and data science, I bring a unique blend of technical expertise and analytical skills to every project I undertake</p>
+            <div class="social-media">
+                <a href="https://web.facebook.com/leobenter1999" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+                <a href="https://x.com/DavidDage2177" target="_blank"><i class='bx bx-x' ></i></a>
+                <a href="https://www.instagram.com/__daviddage" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/david-ouma-a036372b4" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                <a href="https://wa.me/254796395844" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+
+            <a href="#" class="btn">Download CV</a>
+        </div>
+
+        <div class="profession-container">
+            <div class="profession-box">
+                <div class="profession" style="--i:0;">
+                    <i class='bx bx-code-alt' ></i>
+                    <h3>Web Developer</h3>
+                </div>
+                <div class="profession" style="--i:1;">
+                    <i class='bx bxl-react'></i>
+                    <h3>Junior Software Engineer</h3>
+                </div>
+                <div class="profession" style="--i:2;">
+                    <i class='bx bx-palette' ></i>
+                    <h3>Web Designer</h3>
+                </div>
+                <div class="profession" style="--i:3;">
+                    <i class='bx bxs-data' ></i>
+                    <h3>Data Scientist</h3>
+                </div>
+                <div class="circle"></div>
+            </div>
+
+            <div class="overlay"></div>
+        </div>
+
+        <div class="home-img">
+            <img src="about1-removebg-preview.png" alt="">
+        </div>
+     </section>
+     <!-- about section design  -->
+      <section class="about" id="about">
+        <div class="about-img">
+            <img src="about1-removebg-preview.png" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">about <span>Me</span></h2>
+            <p>Hello! I'm David Ouma, a Web Developer and an Aspiring Data Scientist currently studying at Jomo Kenyatta University of Agriculture and Technology, where I am pursuing a Bachelor's degree in Information Technology. My academic journey has equipped me with a solid foundation in both web development and data science, enabling me to create innovative solutions that merge the power of data with seamless web experiences <br> As a Web developer I'm passionate about bilding intuitive, responsive and visually appealing websites....
+            </p>
+
+            <button onclick="navigateToContentPage(1)">More Info >>></button>
+        </div>
+
+        </div>
+      </section>
+
+      <!-- Services section -->
+       <section class="services" id="services">
+        <h2 class="heading"><span>my expertise</span></h2>
+
+        <div class="services-container">
+            <div class="services-box">
+                <i class='bx bxl-react'></i>
+                <h3>Front-End Development</h3>
+                <p id="serviceText">I create visually appealing and responsive websites that provide an excellent user experience. Using the latest technologies like HTML, CSS, and JavaScript, I ensure your site looks great and functions seamlessly across all devices.</p>
+            </div>
+            <div class="services-box">
+                <i class='bx bxl-nodejs'></i>
+                <h3>Back-End Development</h3>
+                <p id="serviceText">I develop robust and scalable server-side applications to power your website. With expertise in technologies such as Node.js, Python and PHP, I build secure and efficient systems that meet your business needs.</p>
+            </div>
+            <div class="services-box">
+                <i class='bx bxs-data'></i>
+                <h3>Data Analysis</h3>
+                <p id="serviceText">I transform raw data into actionable insights. By leveraging tools like Python, R and SQL, I analyze and Interpret complex datasets, helping you make informed decisons and drive your business forward.</p>
+            </div>
+        </div>
+       </section>
+
+       <!-- Portfolio section design -->
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading"><span>Some of my creations</span></h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="portfolio6.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>Portfolio Website</h4>
+                        <p>My personal website to showcase my expertise and reach out to target clients.</p>
+                        <a href="Portfolio.html"><i class='bx bx-link-external' data-url="Portfolio.html"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="newsapi1.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>News Api website</h4>
+                        <p>Are you interested in having knowledge about  what is happening globally at any given time? Say no more, You find out in my news api app.</p>
+                        <a href="News.html"><i class='bx bx-link-external' data-url="News.html"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-box">
+                    <img src="donation1.jpg" alt="">
+
+                    <div class="portfolio-layer">
+                        <h4>Donation Website</h4>
+                        <p>Are you a student in need of a assistance with school fees funding or a pioneer who is willing to help those with financial problems in the our country? This website can be of help</p>
+                        <a href="Donation.html"><i class='bx bx-link-external' data-url="Donation.html"></i></a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- testimonial design -->
+         <div class="testimonial-container">
+            <h2 class="heading">Valuable <span>testimonials</span></h2>
+
+            <div class="testimonial-wrapper">
+                <div class="testimonial-box mySwiper">
+                    <div class="testimonial-content swiper-wrapper">
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="testimonials1.jpg" alt="">
+                            <h3>Austine Mark, <span>Software Developer</span></h3>
+                            <p>I have worked with David on some projects and I have to say that he's dedicated, passionate web developer. He will ensure your business kickin in ni time. I really recommend him.</p>
+
+                        </div>
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="1.jpg" alt="">
+                            <h3>Kassie</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus delectus, amet, saepe dolorum asperiores sunt veniam architecto laboriosam corporis similique ipsum, maxime laudantium molestiae vitae illo nihil ducimus neque aspernatur.</p>
+
+                        </div>
+                        <div class="testimonial-slide swiper-slide">
+                            <img src="1.jpg" alt="">
+                            <h3>Stanley Omondi, <span>freelancer</span></h3>
+                            <p>David is an exceptional web developer with a keen eye for detail and a passion for creating responsive, user-friendly websites. His expertise shines through in every project he undertakes. As an aspiring data scientist, David brings a unique perspective to web development, combining technical skill with a strong understanding of data and user interaction. His dedication and innovative approach make him a valuable addet to any team.</p>
+
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+         </div>
+
+         <!-- contact section design -->
+          <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me!</span></h2>
+
+            <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number" required>
+                    <input type="text" placeholder="Email Subject">
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+          </section>
+
+          <!-- footer design  -->
+           <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy: 2024 by Davidouma | All Rights Reserved</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+            </div>
+           </footer>
+
+           <!-- scroll reveal -->
+           <script src="https://unpkg.com/scrollreveal"></script>
+
+         <!-- swiper js -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
+      <script src="app.js"></script>
+</body>
+</html>
