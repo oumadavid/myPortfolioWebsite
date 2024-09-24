@@ -135,37 +135,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // contact section
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.getElementById('contactForm');
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+  event.preventDefault(); // Prevent the form from refreshing the page
 
-  form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevents the default form submission behavior
+  const formData = new FormData(this);
+  
+  try {
+    const response = await fetch('http://localhost:3000/send-email', {
+      method: 'POST',
+      body: formData
+    });
 
-      const formData = new FormData(form);
-      const data = {
-          fullName: formData.get('fullName'),
-          email: formData.get('email'),
-          mobileNumber: formData.get('mobileNumber'),
-          emailSubject: formData.get('emailSubject'),
-          message: formData.get('message')
-      };
-
-      console.log(data);
- 
-       fetch('daviddage438@gmail.com', {
-          method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body: JSON.stringify(data)
-       })
-       .then(response => response.json())
-       .then(result => {
-           console.log('Success:', result);
-       })
-       .catch(error => {
-           console.error('Error:', error);
-       });
-  });
+    if (response.ok) {
+      alert('Message sent successfully!');
+    } else {
+      alert('Failed to send message.');
+    }
+  } catch (error) {
+    alert('An error occurred: ' + error);
+  }
 });
+
 
