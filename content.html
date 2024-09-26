@@ -8,123 +8,169 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-    body {
-        background-color: var(--bg-color);
-    }
-    :root {
-        --bg-color: #adbbda;
-        --text-color: #3d52ad;
-        --main-color: #7091e6;
-        --white-color: #ede8f5;
-        --shadow-color: #8697c4;
-    }
-    .dark-mode {
-    --bg-color: #1C1C3C;
-    --text-color: #D0D0D0;
-    --shadow-color: #8A2BE2;
-    }
-    span{
-        color: var(--text-color);
-    }
-    .full-content {
-        align-items: center;
-        justify-content: center;
-        width: 80%;
-        height: auto;
-        margin-left: 125px;
-        margin-top: 50px;
-        background: var(--bg-color);
-        border-radius: 1rem;
-        display: flex;
-        flex-direction: column;
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
 
+:root{
+    --bg-color: #adbbda;
+    --text-color: #3d52ad;
+    --main-color: #7091e6;
+    --white-color: #ede8f5;
+    --shadow-color: #8697c4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+h1 span {
+    color: var(--main-color);
+}
+
+h3, h4 {
+    color: var(--text-color);
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Full Content Layout */
+.full-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content-img {
+    flex: 1 1 40%;
+    max-width: 40%;
+    text-align: center;
+    padding: 20px;
+}
+
+.content-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--bg-color);
+}
+
+.content-info {
+    flex: 1 1 55%;
+    padding: 20px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
     }
-    .full-content h1 {
-        font-size: 2.5rem;
-        font-weight: 600;
+
+    .content-info, .content-img {
+        max-width: 100%;
     }
-    .full-content h3 {
-        font-size: 2.3rem;
-        font-weight: 500;
-    }
-    .full-content .content-img img{
-        display: flex;
-        align-items: center;
-        padding-bottom: 50px;
-        margin-bottom: 30px;
-        width: auto;
-        height: 400px;
-        justify-content: center;
-        background: var(--text-color);
-        border-radius: 50%;
-    }
-    .full-content .content-img {
-        background-image: var(--main-color);
-    }
-    .full-content .content-info {
-        margin-top: 50px;
-        margin-left: 50px;
-        margin-right: 50px;
-        background: var(--bg-color);
-        width: 100%;
-        height: auto;
+
+    h1 {
         font-size: 2rem;
-        padding: 10vh;
-        border-radius: 5rem;
     }
-    .content-info h3 {
-        padding-bottom: 20px;
+
+    p {
+        font-size: 0.9rem;
     }
-    .content-info ul li {
-        margin-left: 50px;
-        padding-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
     }
-    @media (max-width: 768px){
-        .full-content{
-            width: 100%;
-            margin: 0;
-        }
-        .full-content .content-info{
-            width: 100%;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 30px;
-        }
-        .full-content .content-img img{
-            height: 300px;
-            padding-bottom: 0;
-        }
+
+    p {
+        font-size: 1.5rem;
     }
+
+    button {
+        width: 100%;
+    }
+}
+
     
 </style>
 <body>
     <div class="full-content">
         <h1>About <span>Me!</span></h1>
-        <div class="content-img">
-            <img src="about1-removebg-preview.png" alt="">
-        </div>
+        <div class="content-wrapper">
+            <div class="content-img">
+                <img src="about1-removebg-preview.png" alt="Profile Image">
+            </div>
 
-        <div class="content-info">
-            <h3>Hi, I'm Here To Help Your Next Project!</h3>
-            <p id="content-text">Hello! I'm David Ouma, a Web Developer and Data Scientist currently studying at Jomo Kenyatta University of Agriculture and Technology, where I am pursuing a Bachelor's degree in Information Technology. My academic journey has equipped me with a solid foundation in both web development and data science, enabling me to create innovative solutions that merge the power of data with seamless web experiences <br> As a Web developer I'm passionate about bilding intuitive, responsive and visually appealing websites. My expertise include:<br><br><ul>
-                <li><span>Front-end Development(Html, CSS and JavaScript)</span></li>
-                <li><span>Back-end Development(Node.js, Python and PHP)</span></li>
-                <li><span>Full-stack Development</span></li>
-            </ul><br>In the realm of data science, I thrieve on analyzing data to uncover meaningful insights and drive informed decisions. My skills encompass:<ul>
-                <li><span>Data Analysis:</span>Utilizing tools such as Python, R, and SQL to analyze and interpret complex datasets.</li>
-                <li><span>Machine Learning:</span> Creating predictive models and algorithms to solve real-world problems.</li>
-                <li><span>Data Visualization:</span>Presenting data insights through compelling visualizations using tools like Tableau and Matplotlib</li>
-            </ul>
-            <h3>My Vision</h3>
-            I am driven by a commitment to innovation and excellence. Whether developing a dynamic website or analyzing data to dfiev strategic decisions, my goal is to deliver solutions that are not only effective but also impactful. I am constantly learning and volving, eager to stay at the the forefront of technological advancements.<br>
-            Explore my portfolio to see my work, and don't hesitate to reach out if you're looking for a dedicated professional yo collaborate on your next project. Let's create something extraordinary together.
-            </p>
-
+            <div class="content-info">
+                <h3>Hi, I'm Here To Help Your Next Project!</h3>
+                <p id="content-text">
+                    Hello! I'm David Ouma, a Web Developer and Data Scientist currently studying at Jomo Kenyatta University of Agriculture and Technology, pursuing a Bachelor's degree in Information Technology. 
+                    My academic journey has equipped me with a solid foundation in both web development and data science, enabling me to create innovative solutions that merge the power of data with seamless web experiences.
+                </p>
+                <h4>My Expertise Includes:</h4>
+                <ul>
+                    <li>Front-end Development (HTML, CSS, JavaScript)</li>
+                    <li>Back-end Development (Node.js, Python, PHP)</li>
+                    <li>Full-stack Development</li>
+                </ul>
+                <h4>Data Science Skills:</h4>
+                <ul>
+                    <li>Data Analysis (Python, R, SQL)</li>
+                    <li>Machine Learning (Predictive Models)</li>
+                    <li>Data Visualization (Tableau, Matplotlib)</li>
+                </ul>
+                <h3>My Vision</h3>
+                <p>I am committed to innovation and excellence, whether developing dynamic websites or analyzing data to drive decisions. Explore my portfolio and let's collaborate on your next project!</p>
+                <button onclick="goBack()">Back</button>
+            </div>
         </div>
-       <button onclick="goBack(1)"> <<< Back</button>
     </div>
-
 
     <script src="app.js"></script>
 </body>
+
 </html>

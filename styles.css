@@ -35,7 +35,7 @@ body {
     color: var(--text-color);
 }
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -45,6 +45,7 @@ body {
     align-items: center;
     z-index: 100;
     transition: .5s;
+    background-color: var(--bg-color);
 }
 
 .header .sticky {

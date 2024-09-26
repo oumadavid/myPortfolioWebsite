@@ -3,187 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Api Website</title> 
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Ouma | News API Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        border: none;
-        outline: none;
-        scroll-behavior: smooth;
-        font-family: 'poppins', sans-serif;
-        
-    }
-
-    body {
-        width: auto;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        background: var(--bg-color);
-        position: relative;
-    }
-
-    :root {
-        --bg-color: #865d36;
-        --text-color: #3e362e;
-        --main-color: #93785b;
-        --white-color: #ac8968;
-        --shadow-color: #a69080;
+    /* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-    .project-box {
+:root{
+    --bg-color: #adbbda;
+    --text-color: #3d52ad;
+    --main-color: #7091e6;
+    --white-color: #ede8f5;
+    --shadow-color: #8697c4;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6347;
+}
+
+/* Dark mode and menu icon styles */
+.icon-container {
+    display: none;
+    gap: 20px;
+}
+
+#darkMode-icon, #menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Project section */
+.project-box {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.project-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.project-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.project-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Project content */
+.project-content {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.project-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.project-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+.project-info ul li:before {
+    content: '✔';
+    color: var(--white-color);
+    position: absolute;
+    left: 0;
+}
+
+p {
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Footer style */
+footer {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        display: flex;
-        background: var(--bg-color);
-        width: auto;
     }
 
-
-
-    .project-conatiner {
-        place-items: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+    .project-details {
+        margin-left: 0;
+        text-align: center;
     }
 
-    .projects {
-        align-items: center;
-        background: var(--bg-color);
-        justify-content: center;
-        position: relative;
-        display: flex;
-        place-items: center;
-        width: 100%;
-        height: 500px;
-        top: 0;
-        left: 10px;
+    .navbar {
+        display: none;
     }
 
-    .projects img {
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-
-    }
-
-    .web {
-        background: var(--bg-color);
-        left: 215px;
-    }
-
-    .web h2 {
-        top: 500px;
-        left: 300px;
-        font-weight: 700;
-        font-size: 1.7rem;
-    }
-
-    .web p {
-        font-size: 1.5rem;
-    }
-
-    section {
-        height: auto;
-    }
-
-    .project-content {
-        position: relative;
-    }
-
-    .project-content .projects-info {
-        align-items: center;
-        background: var(--white-color);
-        border-radius: 10px;
+    #menu-icon {
         display: block;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: auto;
-        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .project-content .projects-info h2 {
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin: 10px ;
+    .project-details h2 {
+        font-size: 22px;
     }
 
-    .project-content .projects-info p{
-        font-size: 1.5rem;
-        margin: 10px 5px;
+    .project-info h2 {
+        font-size: 20px;
     }
-
-    .project-content .projects-info li {
-        font-size: 1.5rem;
-        margin: 5px 50px;
-    }
-
-    hr {
-        color: var(--text-color);
-        width: 100%;
-    }
+}
 
 </style>
-
 <body>
+
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">David Ouma.</a>
+        <a href="#" class="logo">David Ouma</a>
         <nav class="navbar">
-            <a href="#home" >Home</a>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
 
-        <div class="bx bx-moon" id="darkMode-icon"></div>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="icon-container">
+            <div class="bx bx-moon" id="darkMode-icon"></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
-    <section class="project-box" id="project-box">
-        <div class="project-container" id="project-container">
-            <div class="projects">
-                <img src="newsapi2.jpg" alt="">
-                <p></p>
+    <!-- Main Content -->
+    <div class="project-box" id="project-box">
+        <div class="project-container">
+            <div class="project-image">
+                <img src="newsapi2.jpg" alt="News API Project Screenshot">
             </div>
-            <div class="web">
-                <h2>my News Api Website</h2>
-                <p><i class='bx bxs-contact'></i>David Ouma</p>
-                <p>february 01, 2024 - february 09, 2024</p>
+            <div class="project-details">
+                <h2>My News API Website</h2>
+                <p><i class='bx bxs-contact'></i> David Ouma</p>
+                <p>February 01, 2024 - February 09, 2024</p>
             </div>
         </div>
+    </div>
 
-    </section>
-
-    <section class="project-content" id="project-content">
-        <div class="projects-info">
-            <p>I developed a dynamic News Api website designed to provide users with the latest news from around the world. Utilizing a modern tech stach, including CSS, HTML and JavaScript, the website offers a seamless and engaging user experience.</p>
+    <div class="project-content" id="project-content">
+        <div class="project-info">
+            <p>I developed a dynamic News API website designed to provide users with the latest news from around the world. Utilizing a modern tech stack, including CSS, HTML, and JavaScript, the website offers a seamless and engaging user experience.</p>
             <h2>Key Features</h2>
             <ul>
-                <li><b>Real-Time Updates:</b> Fetches and displays current articles using a relaible news Api.</li>
+                <li><b>Real-Time Updates:</b> Fetches and displays current articles using a reliable News API.</li>
                 <li><b>Customize Feeds:</b> Users can tailor their news feed based on categories such as sports, technology, politics, and more.</li>
                 <li><b>Interactive UI:</b> Responsive design ensuring optimal performance across various devices and screen sizes.</li>
             </ul>
-            <p>This Project highlights my proficiency in front-end development and API integration, demonstrating my ability to create functional and user-centric web applications.</p>
-            <hr style="width: 100%; color: var(--text-color);">
-            <p>Feel free to modify any part of the description to better fit your vision and the specifics of your project.</p>
+            <p>This project highlights my proficiency in front-end development and API integration, demonstrating my ability to create functional and user-centric web applications.</p>
         </div>
-    </section>
+    </div>
 
-    
-
+    <!-- Footer -->
+    <footer>
+        <p>David Ouma | &copy; 2024</p>
+    </footer>
 
     <script src="app.js"></script>
     

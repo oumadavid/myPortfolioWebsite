@@ -3,192 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title> 
-
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>David Ouma | Personal Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        text-decoration: none;
-        border: none;
-        outline: none;
-        scroll-behavior: smooth;
-        font-family: 'poppins', sans-serif;
-        
-    }
-
-    body {
-        width: auto;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        background: var(--bg-color);
-        position: relative;
-    }
-
-    :root {
-        --bg-color: #865d36;
-        --text-color: #3e362e;
-        --main-color: #93785b;
-        --white-color: #ac8968;
-        --shadow-color: #a69080;
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-    .project-box {
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+:root{
+    --bg-color: #adbbda;
+    --text-color: #3d52ad;
+    --main-color: #7091e6;
+    --white-color: #ede8f5;
+    --shadow-color: #8697c4;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: none;
+}
+
+.navbar a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6347;
+}
+
+.icon-container {
+    display: none;
+    gap: 20px;
+}
+
+#darkMode-icon, #menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Project Section */
+.project-box {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.project-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.project-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.project-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Project Content */
+.project-content {
+    background-color: var(--bg-color);
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.project-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-info ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.project-info ul li:before {
+    content: '✔';
+    color: var(--white-color);
+    position: absolute;
+    left: 0;
+}
+
+p{
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        display: flex;
-        background: var(--bg-color);
-        width: auto;
     }
 
-
-
-    .project-conatiner {
-        place-items: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
+    .project-details {
+        margin-left: 0;
+        text-align: center;
     }
 
-    .projects {
-        align-items: center;
-        background: var(--bg-color);
-        justify-content: center;
-        position: relative;
-        display: flex;
-        place-items: center;
-        width: 100%;
-        height: 500px;
-        top: 0;
-        left: 10px;
+    .navbar {
+        display: none;
     }
 
-    .projects img {
-        width: 100%;
-        height: auto;
-        display: grid;
-        place-items: center;
-
-    }
-
-    .web {
-        background: var(--bg-color);
-        left: 215px;
-    }
-
-    .web h2 {
-        top: 500px;
-        left: 300px;
-        font-weight: 700;
-        font-size: 1.7rem;
-    }
-
-    .web p {
-        font-size: 1.5rem;
-    }
-
-    section {
-        height: auto;
-    }
-
-    .project-content {
-        position: relative;
-    }
-
-    .project-content .projects-info {
-        align-items: center;
-        background: var(--white-color);
-        border-radius: 10px;
+    #menu-icon {
         display: block;
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: auto;
-        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .project-content .projects-info h2 {
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin: 10px ;
+    .project-details h2 {
+        font-size: 22px;
     }
 
-    .project-content .projects-info p{
-        font-size: 1.5rem;
-        margin: 10px 5px;
+    .project-info h2 {
+        font-size: 20px;
     }
-
-    .project-content .projects-info li {
-        font-size: 1.5rem;
-        margin: 5px 50px;
-    }
+}
 
 </style>
-
 <body>
+
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">David Ouma.</a>
+        <a href="#" class="logo">David Ouma</a>
         <nav class="navbar">
-            <a href="#home" >Home</a>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <div class="bx bx-moon" id="darkMode-icon"></div>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="icon-container">
+            <div class="bx bx-moon" id="darkMode-icon"></div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
-    <section class="project-box" id="project-box">
-        <div class="project-container" id="project-container">
-            <div class="projects">
-                <img src="portfolio7.jpg" alt="">
-                <p></p>
+    <!-- Project Section -->
+    <div class="project-box">
+        <div class="project-container">
+            <div class="project-image">
+                <img src="portfolio7.jpg" alt="Personal Website Screenshot">
             </div>
-            <div class="web">
-                <h2>my personal website</h2>
+            <div class="project-details">
+                <h2>My Personal Website</h2>
                 <p><i class='bx bxs-contact'></i>David Ouma</p>
                 <p>June 15, 2024 - June 30, 2024</p>
             </div>
         </div>
+    </div>
 
-    </section>
-
-    <section class="project-content" id="project-content">
-        <div class="projects-info">
-            <p>Using my coding experience I decided to develop ny portfolio website to display programming experiences in coding , connect with clients and also people in the tech industry.</p>
+    <!-- Project Content -->
+    <div class="project-content">
+        <div class="project-info">
+            <p>Using my coding experience, I developed a portfolio website to display my programming expertise, connect with clients, and engage with people in the tech industry.</p>
             <h2>Captured Pages</h2>
             <ul>
                 <li>Home page</li>
                 <li>About</li>
                 <li>Services</li>
                 <li>Portfolio</li>
-                <li>contacts</li>
+                <li>Contact</li>
             </ul>
-            <h2>Contents of the Website</h2>
-            <p>These are what is contained in the website</p>
+            <h2>Website Content</h2>
             <ul>
-                <li>The field I specialize in and various languages I use in those fields</li>
-                <li>How to reach me via various social media platforms</li>
-                <li>Testimonials from colleagues I have worked with and clients that I served</li>
-                <li>Some of the Projects that I have ceeated.</li>
-                <li>A textarea to add your view about the website.</li>
+                <li>Fields I specialize in and the languages I use in those fields.</li>
+                <li>How to reach me via various social media platforms.</li>
+                <li>Testimonials from colleagues and clients.</li>
+                <li>A showcase of the projects I've created.</li>
+                <li>A textarea for visitors to share their feedback.</li>
             </ul>
         </div>
-    </section>
+    </div>
 
-    
-
+    <!-- Footer -->
+    <footer>
+        <p>David Ouma | &copy; 2024</p>
+    </footer>
 
     <script src="app.js"></script>
-    
+
 </body>
 </html>
