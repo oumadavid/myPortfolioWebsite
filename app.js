@@ -141,7 +141,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const formData = new FormData(this);
   
   try {
-    const response = await fetch('http://localhost:3000/send-email', {
+    const response = await fetch('https://oumadavid.github.io/myPortfolioWebsite/send-email', {
       method: 'POST',
       body: formData
     });
